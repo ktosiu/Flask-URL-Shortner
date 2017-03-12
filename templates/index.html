@@ -5,12 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>{{ title }}</title>
-	<link rel="stylesheet" type="text/css" href="../static/css/button.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/form.min.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/header.min.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/site.min.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/reset.min.css">	
 	<title>Flask URL shortner</title>
 	<style>
 		body {
@@ -37,7 +32,7 @@
 	        <h1 class="ui inverted header"><font size="140">Flask URL Shortner</font></h1>
 			<form class="ui form" method="POST" action="/create-url">
 				<div class="ui fluid medium action input">
-					{{ form.url()}} 
+					{{ form.url()}}
 					<button class="ui teal button">Shorten</button>
 					<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
 				</div>
@@ -45,7 +40,7 @@
 	        {% with messages = get_flashed_messages() %}
 	          {% if messages %}
 	            {% for message in messages %}
-	                <div class="ui message"><strong>{{ message | safe }}</strong></div>    
+	                <div class="ui message"><strong>{{ message | safe }}</strong></div>
 	            {% endfor %}
 	          {% endif %}
 	        {% endwith %}
